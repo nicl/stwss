@@ -35,12 +35,7 @@ our Father who loves us, and to point to Jesus who showed us the way!
 
 ## Existing sites we like
 
-* St Michael's, Gyford
-* Christ Church Balham
-* Holy Trinity Clapham
-
-These sites have simple and clear navigation, bold images
-(particularly on the homepage), and 'younger' designs.
+[/docs/sites-we-like.md](/docs/sites-we-like.md)
 
 ## Colours and design
 
