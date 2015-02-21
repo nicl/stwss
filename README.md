@@ -26,9 +26,12 @@ which does have options here.
 The website should also serve the existing congregation by
 communicating our services, other events, and any other notices.
 
-Lastly, the website should also help those seeking to use the church
+The website should also help those seeking to use the church
 building(s) for community and/or commercial use. This may come at a
 later stage though.
+
+Above all, we want the website and our work on it to bring glory to
+our Father who loves us, and to point to Jesus who showed us the way!
 
 ## Existing sites we like
 
