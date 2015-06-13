@@ -1,0 +1,49 @@
+.logo img {
+    height: 35px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.banner-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.banner-image img {
+    width: 100%;
+}
+
+body.navbar-is-fixed-top {
+    padding-top: 52px!important;
+}
+
+.navbar-default {
+    background-color: white;
+}
+
+.navbar-default .navbar-nav {
+    float: right;
+}
+
+.navbar-default .navbar-nav a {
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: white;    
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: #f9f9f9;
+}
+
+.welcome-cards .card {
+    background-color: #f9f9f9;
+    min-height: 200px;
+}
+
+.jumbotron.banner {
+    padding: 0;
+}
