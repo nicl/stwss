@@ -112,7 +112,7 @@
 
 <div class="jumbotron banner">
   <div class="banner-image">
-    <img src="sites/all/themes/stwss/img/main-banner.jpg" class="img-responsive" />
+    <img src="/sites/all/themes/stwss/img/main-banner.jpg" class="img-responsive" />
   </div>
 </div>
 

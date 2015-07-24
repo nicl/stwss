@@ -2,14 +2,14 @@
 core = 7.x
 
 api = 2
-projects[drupal][version] = "7.36"
+projects[drupal][version] = "7.38"
 
 ; Modules
-projects[backup_migrate][version] = "3.0"
+projects[backup_migrate][version] = "3.1"
 
 projects[ctools][version] = "1.7"
 
-projects[jquery_update][version] = "2.5"
+projects[jquery_update][version] = "2.6"
 
 projects[oauth][version] = "3.2"
 
@@ -19,4 +19,11 @@ projects[views][version] = "3.11"
 
 ; Themes
 projects[bootstrap][version] = "3.0"
+
+; Please fill the following out. Type may be one of get, git, bzr or svn,
+; and url is the url of the download.
+projects[stwss][download][type] = ""
+projects[stwss][download][url] = ""
+projects[stwss][type] = "theme"
+
 
