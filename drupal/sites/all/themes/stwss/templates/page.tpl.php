@@ -133,20 +133,34 @@
   area.</p>
 
   <div class="row welcome-cards">
-    <div class="col-md-3 card"></div>
-    <div class="col-md-3 card"></div>
-    <div class="col-md-3 card"></div>
-    <div class="col-md-3 card"></div>
+    <div class="col-md-3"><div class="card"></div></div>
+    <div class="col-md-3"><div class="card"></div></div>
+    <div class="col-md-3"><div class="card"></div></div>
+    <div class="col-md-3"><div class="card"></div></div>
   </div>
 
-  <div class="row activies">
-    <div class="col-md-4"></div>
-    <div class="col-md-4"></div>
-    <div class="col-md-4"></div>
+  <div class="row service-map">
+    <div class="col-md-4">
+      <h4>Sundays 10:30am, St Thomas'</h4>
+      <p>Our main service, very children friendly.</p>
+      <h4>Sundays 7pm, St Stephen's church</h4>
+      <p>Informal evening service, with an emphasis on worship,
+      testimony, teaching and prayer.</p>
+      <p><a href="sundays">Find out more about our services and locations ></a></p>
+    </div>
+    <div class="col-md-8 map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9947.726187284585!2d-0.13538796826171373!3d51.44105100696213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760431f9eb056f%3A0x834ece120d0eb99a!2sSt+Thomas&#39;+Church+(Telford+Park)!5e0!3m2!1sen!2suk!4v1434291141795" width="100%" height="200px" frameborder="0" style="border:0"></iframe>
+    </div>
+  </div>
+
+  <div class="row activites">
+    <div class="col-md-4"><div class="card"></div></div>
+    <div class="col-md-4"><div class="card"></div></div>
+    <div class="col-md-4"><div class="card"></div></div>
   </div>
 
 
-    <?php if (!empty($page['sidebar_first'])): ?>
+    <?php /* <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
@@ -180,10 +194,41 @@
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
+    <?php endif; ?> */ ?>
 
   </div>
 </div>
-<footer class="footer container">
-  <?php print render($page['footer']); ?>
+<footer class="footer">
+  <div class="container">
+    <?php print render($page['footer']); ?>
+
+    <div class="row activites">
+      <div class="col-md-3">
+        <address>
+          <h4>Main address</h4>
+          St Thomas with St Stephen<br>
+          Parish Office<br>
+          Weir Road<br>
+          London SW12 0NU<br>
+          <strong>Phone:</strong> 020 8675 5086
+        </address>
+        <address>
+          <strong>Email</strong><br>
+          <a href="mailto:#">office@stwss.org.uk</a>
+        </address>
+      </div>
+
+      <div class="col-md-3">
+        <h4>Quicklinks</h4>
+        <ul class="list-unstyled">
+          <li><a href="foo">About</a></li>
+          <li><a href="foo">Giving</a></li>
+          <li><a href="foo">Job opportunities</a></li>
+          <li><a href="foo">Safeguarding</a></li>
+          <li><a href="foo">Baptisms and confirmations</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
 </footer>
