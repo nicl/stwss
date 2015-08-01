@@ -16,7 +16,7 @@
 }
 
 body.navbar-is-fixed-top {
-    padding-top: 52px!important;
+    padding-top: 51px!important;
 }
 
 .navbar-default {
@@ -32,10 +32,12 @@ body.navbar-is-fixed-top {
 }
 
 .navbar-default .navbar-nav>.active>a {
-    background-color: white;    
+    /* background-color: white; */
 }
 
-.navbar-default .navbar-nav>.active>a:hover {
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>li>a:hover {
     background-color: #f9f9f9;
 }
 
@@ -53,7 +55,7 @@ body.navbar-is-fixed-top {
     padding: 0;
 }
 
-.row {
+.row + .row {
     padding-top: 30px;
 }
 
@@ -63,16 +65,41 @@ body.navbar-is-fixed-top {
 
 .footer {
     margin-top: 30px;
-    padding: 0 0 30px 0;
-    background-color: #555;
-    color: white;
+    padding: 30px 0 30px 0;
+    /* background-image: url("/sites/all/themes/stwss/img/footer-background.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: auto auto; */
 }
 
 .footer a {
-    color: white;
+    /* color: white; */
 }
 
 .footer a:hover {
-    color: #428bca;
-    text-decoration: none;
+    /* color: #428bca; */
+    /* text-decoration: none; */
+}
+
+/* Title block */
+
+.title-banner {
+    padding: 30px;
+    color: white;
+    background-color: #b10918;
+}
+
+.title-banner h1 {
+    font-size: 55px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.nav-pills {
+    margin-bottom: 20px;
+}
+
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
 }

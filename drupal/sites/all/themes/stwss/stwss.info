@@ -1,4 +1,4 @@
-name = Stwss
+name = stwss
 description = Custom theme for STWSS website, subtheme of Bootstrap
 core = 7.x
 base theme = bootstrap

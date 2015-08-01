@@ -110,12 +110,21 @@
   </div>
 </header>
 
-<div class="jumbotron banner">
-  <div class="banner-image">
-    <img src="/sites/all/themes/stwss/img/main-banner.jpg" class="img-responsive" />
+<!-- <div class="title-banner"> -->
+<!--   <div class="container"> -->
+<!--       <?php print render($title_prefix); ?> -->
+<!--       <?php if (!empty($title)): ?> -->
+<!--         <h1 class="page-header"><?php print $title; ?></h1> -->
+<!--       <?php endif; ?> -->
+<!--       <?php print render($title_suffix); ?> -->
+<!--   </div> -->
+<!-- </div> -->
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="page-header"><?php print $title; ?></h1>
   </div>
 </div>
-
 
 <div class="main-container container">
 
@@ -127,30 +136,34 @@
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
 
-  <p class="lead text-center">Welcome to the St Thomas with St
-  Stephen's website! We are a vibrant Anglican church in Clapham
-  Park. We want to live out our faith in community and transform our
-  area.</p>
+  <div class="row"
 
-  <div class="row welcome-cards">
-    <div class="col-md-3"><div class="card"></div></div>
-    <div class="col-md-3"><div class="card"></div></div>
-    <div class="col-md-3"><div class="card"></div></div>
-    <div class="col-md-3"><div class="card"></div></div>
-  </div>
+  <div class="row">
+    <section<?php print $content_column_class; ?>>
+      <?php if (!empty($page['highlighted'])): ?>
+      <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+      <?php endif; ?>
+      <!-- <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?> -->
+      <a id="main-content"></a>
 
-  <div class="row service-map">
-    <div class="col-md-4">
-      <h4>Sundays 10:30am, St Thomas'</h4>
-      <p>Our main service, very children friendly.</p>
-      <h4>Sundays 7pm, St Stephen's church</h4>
-      <p>Informal evening service, with an emphasis on worship,
-      testimony, teaching and prayer.</p>
-      <p><a href="sundays">Find out more about our services and locations ></a></p>
-    </div>
-    <div class="col-md-8 map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9947.726187284585!2d-0.13538796826171373!3d51.44105100696213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760431f9eb056f%3A0x834ece120d0eb99a!2sSt+Thomas&#39;+Church+(Telford+Park)!5e0!3m2!1sen!2suk!4v1434291141795" width="100%" height="200px" frameborder="0" style="border:0"></iframe>
-    </div>
+      <?php print $messages; ?>
+      <?php if (!empty($page['help'])): ?>
+      <?php print render($page['help']); ?>
+      <?php endif; ?>
+
+      <?php if (!empty($stwss_child_links)): ?>
+      <ul class="nav nav-pills">
+        <?php foreach($stwss_child_links as $link) { ?>
+        <li role="presentation" <?php if ($link['active']) print 'class="active"'; ?>><a href="<?php print $link['path']; ?>"><?php print $link['title']; ?></a></li>
+        <?php } ?>
+      </ul>
+      <?php endif; ?>
+
+      <?php if (!empty($action_links)): ?>
+      <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+    </section>
   </div>
 
   <div class="row activites">
