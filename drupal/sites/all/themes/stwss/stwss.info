@@ -6,7 +6,6 @@ base theme = bootstrap
 ;; CSS
 stylesheets[all][] = css/style.css
 
-
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;

@@ -111,9 +111,94 @@
 </header>
 
 <div class="jumbotron banner">
-  <div class="banner-image">
-    <img src="/sites/all/themes/stwss/img/main-banner.jpg" class="img-responsive" />
-  </div>
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1024px; height: 342px; overflow: hidden;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1024px; height: 342px;">
+            <div><img u="image" src="/sites/all/themes/stwss/img/main-banner.jpg" /></div>
+            <div><img u="image" src="/sites/all/themes/stwss/img/main-banner.jpg" /></div>
+        </div>
+
+        <!--#region Arrow Navigator Skin Begin -->
+        <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
+        <style>
+            /* jssor slider arrow navigator skin 12 css */
+            /*
+            .jssora12l                  (normal)
+            .jssora12r                  (normal)
+            .jssora12l:hover            (normal mouseover)
+            .jssora12r:hover            (normal mouseover)
+            .jssora12l.jssora12ldn      (mousedown)
+            .jssora12r.jssora12rdn      (mousedown)
+            */
+            .jssora12l, .jssora12r {
+                display: block;
+                position: absolute;
+                /* size of arrow element */
+                width: 30px;
+                height: 46px;
+                cursor: pointer;
+                background: url(/sites/all/themes/stwss/img/a12.png) no-repeat;
+                overflow: hidden;
+            }
+            .jssora12l { background-position: -16px -37px; }
+            .jssora12r { background-position: -75px -37px; }
+            .jssora12l:hover { background-position: -136px -37px; }
+            .jssora12r:hover { background-position: -195px -37px; }
+            .jssora12l.jssora12ldn { background-position: -256px -37px; }
+            .jssora12r.jssora12rdn { background-position: -315px -37px; }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora12l" style="top: 123px; left: 0px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora12r" style="top: 123px; right: 0px;">
+        </span>
+        <!--#endregion Arrow Navigator Skin End -->
+
+        <!--#region Bullet Navigator Skin Begin -->
+        <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
+        <style>
+            /* jssor slider bullet navigator skin 21 css */
+            /*
+            .jssorb21 div           (normal)
+            .jssorb21 div:hover     (normal mouseover)
+            .jssorb21 .av           (active)
+            .jssorb21 .av:hover     (active mouseover)
+            .jssorb21 .dn           (mousedown)
+            */
+            .jssorb21 {
+                position: absolute;
+            }
+            .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+                position: absolute;
+                /* size of bullet elment */
+                width: 19px;
+                height: 19px;
+                text-align: center;
+                line-height: 19px;
+                color: white;
+                font-size: 12px;
+                background: url(/sites/all/themes/stwss/img/b21.png) no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .jssorb21 div { background-position: -5px -5px; }
+            .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+            .jssorb21 .av { background-position: -65px -5px; }
+            .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+        </style>
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb21" style="bottom: 16px; right: 6px;">
+            <!-- bullet navigator item prototype -->
+            <div u="prototype"></div>
+        </div>
+        <!--#endregion Bullet Navigator Skin End -->
+
+    </div>
+
+  <!-- <div class="banner-image"> -->
+  <!--   <img src="/sites/all/themes/stwss/img/main-banner.jpg" class="img-responsive" /> -->
+  <!-- </div> -->
 </div>
 
 
@@ -133,10 +218,10 @@
   area.</p>
 
   <div class="row welcome-cards">
-    <div class="col-md-3"><div class="card"></div></div>
-    <div class="col-md-3"><div class="card"></div></div>
-    <div class="col-md-3"><div class="card"></div></div>
-    <div class="col-md-3"><div class="card"></div></div>
+    <div class="col-md-3"><div class="card action-point"><a href="/welcome"><h2>Welcome</h2></a></div></div>
+    <div class="col-md-3"><div class="card action-point"><a href="/sundays"><h2>Our services</h2></a></div></div>
+    <div class="col-md-3"><div class="card action-point"><a href="/alpha"><h2>Exploring faith</h2></a></div></div>
+    <div class="col-md-3"><div class="card action-point"><a href="/children-and-young-people"><h2>Children & young people</h2></a></div></div>
   </div>
 
   <div class="row service-map">
@@ -153,54 +238,13 @@
     </div>
   </div>
 
-  <div class="row activites">
-    <div class="col-md-4"><div class="card"></div></div>
-    <div class="col-md-4"><div class="card"></div></div>
-    <div class="col-md-4"><div class="card"></div></div>
+  <div class="row">
+    <?php print render($page['footer']); ?>
   </div>
 
-
-    <?php /* <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
-
-    <section<?php print $content_column_class; ?>>
-      <?php if (!empty($page['highlighted'])): ?>
-        <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php if (!empty($tabs)): ?>
-        <?php print render($tabs); ?>
-      <?php endif; ?>
-      <?php if (!empty($page['help'])): ?>
-        <?php print render($page['help']); ?>
-      <?php endif; ?>
-      <?php if (!empty($action_links)): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-    </section>
-
-    <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?> */ ?>
-
-  </div>
 </div>
 <footer class="footer">
   <div class="container">
-    <?php print render($page['footer']); ?>
 
     <div class="row activites">
       <div class="col-md-3">
