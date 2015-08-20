@@ -15,8 +15,14 @@
     width: 100%;
 }
 
-body.navbar-is-fixed-top {
+body.navbar-is-fixed-top,
+body.toolbar.navbar-is-fixed-top {
     padding-top: 51px!important;
+}
+
+body.logged-in.navbar-is-fixed-top,
+body.logged-in.toolbar.navbar-is-fixed-top {
+    padding-top: 81px!important;
 }
 
 .navbar-default {
@@ -49,7 +55,7 @@ body.navbar-is-fixed-top {
 
 .card {
     background-color: #f9f9f9;
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     min-height: 200px;
 }
@@ -58,13 +64,17 @@ body.navbar-is-fixed-top {
     padding: 0px;
 }
 
+.welcome-cards .col-md-3 {
+    padding: 0;
+}
+
 .card.action-point a {
     align-items: center;
     justify-content: center;
     text-align: center;
     display: flex;
     height: 200px;
-    width: 260px;
+    width: 100%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
@@ -73,6 +83,10 @@ body.navbar-is-fixed-top {
 .card.action-point a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
+}
+
+.card.action-point.alpha {
+    background-image: url("/sites/all/themes/stwss/img/action-point-alpha.png");
 }
 
 .card h2 {

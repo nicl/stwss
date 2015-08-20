@@ -218,9 +218,9 @@
   area.</p>
 
   <div class="row welcome-cards">
-    <div class="col-md-3"><div class="card action-point"><a href="/welcome"><h2>Welcome</h2></a></div></div>
+    <div class="col-md-3"><div class="card action-point"><a href="/about-us"><h2>Welcome</h2></a></div></div>
     <div class="col-md-3"><div class="card action-point"><a href="/sundays"><h2>Our services</h2></a></div></div>
-    <div class="col-md-3"><div class="card action-point"><a href="/alpha"><h2>Exploring faith</h2></a></div></div>
+    <div class="col-md-3"><div class="card action-point alpha"><a href="/alpha"><h2>Exploring faith</h2></a></div></div>
     <div class="col-md-3"><div class="card action-point"><a href="/children-and-young-people"><h2>Children & young people</h2></a></div></div>
   </div>
 
