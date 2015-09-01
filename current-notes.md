@@ -54,3 +54,10 @@ could just scp all the files? yes!
 --
 
 Homepage:
+
+
+
+
+## Commands
+
+rsync -vr --exclude=settings.php -e 'ssh -i /Users/nlong/.ssh/stwss-key-pair.pem' /Users/nlong/projects/stwss/drupal/ ec2-user@stwss:/var/www/html/

@@ -74,78 +74,98 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="container">
-    <div class="navbar-header">
-      <?php if ($logo): ?>
-      <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-      </A>
-      <?php endif; ?>
+    <div class="container">
+        <div class="navbar-header">
+            <?php if ($logo): ?>
+                <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                    <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                </A>
+            <?php endif; ?>
 
-      <?php if (!empty($site_name)): ?>
-      <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
+            <?php if (!empty($site_name)): ?>
+                <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+            <?php endif; ?>
 
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+            <div class="navbar-collapse collapse">
+                <nav role="navigation">
+                    <?php if (!empty($primary_nav)): ?>
+                        <?php print render($primary_nav); ?>
+                    <?php endif; ?>
+                    <?php if (!empty($page['navigation'])): ?>
+                        <?php print render($page['navigation']); ?>
+                    <?php endif; ?>
+                </nav>
+            </div>
+        <?php endif; ?>
     </div>
-
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
-        </nav>
-      </div>
-    <?php endif; ?>
-  </div>
 </header>
 
 <div class="jumbotron banner">
     <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1024px; height: 342px; overflow: hidden;">
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1024px; height: 342px;">
-            <div><img u="image" src="/sites/all/themes/stwss/img/main-banner.jpg" /></div>
-            <div><img u="image" src="/sites/all/themes/stwss/img/main-banner.jpg" /></div>
+            <div>
+                <a u="image" href="/welcome"><img src="/sites/all/themes/stwss/img/main-banner-love-lambeth.jpg" /></a>
+                <a u="caption" href="/welcome" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
+                    <div class="banner-inner">
+                        <h1>Welcome</h1>
+                        <p>We are a vibrant Anglican church in Clapham Park. We want to live out our faith in community and transform our area.</p>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a u="image" href="/alpha"><img src="/sites/all/themes/stwss/img/main-banner-alpha.jpg" /></a>
+                <a u="caption" href="/alpha" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
+                    <div class="banner-inner">
+                        <h1>Got questions about life</h1>
+                        <p>Alpha is for everyone who's curious. Alpha starts Tuesday 22nd September 7:15 (with supper).</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- <div> -->
+            <!--     <img u="image" src="/sites/all/themes/stwss/img/main-banner-alpha.jpg" /> -->
+            <!-- </div> -->
         </div>
 
         <!--#region Arrow Navigator Skin Begin -->
         <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
         <style>
-            /* jssor slider arrow navigator skin 12 css */
-            /*
+         /* jssor slider arrow navigator skin 12 css */
+         /*
             .jssora12l                  (normal)
             .jssora12r                  (normal)
             .jssora12l:hover            (normal mouseover)
             .jssora12r:hover            (normal mouseover)
             .jssora12l.jssora12ldn      (mousedown)
             .jssora12r.jssora12rdn      (mousedown)
-            */
-            .jssora12l, .jssora12r {
-                display: block;
-                position: absolute;
-                /* size of arrow element */
-                width: 30px;
-                height: 46px;
-                cursor: pointer;
-                background: url(/sites/all/themes/stwss/img/a12.png) no-repeat;
-                overflow: hidden;
-            }
-            .jssora12l { background-position: -16px -37px; }
-            .jssora12r { background-position: -75px -37px; }
-            .jssora12l:hover { background-position: -136px -37px; }
-            .jssora12r:hover { background-position: -195px -37px; }
-            .jssora12l.jssora12ldn { background-position: -256px -37px; }
-            .jssora12r.jssora12rdn { background-position: -315px -37px; }
+          */
+         .jssora12l, .jssora12r {
+             display: block;
+             position: absolute;
+             /* size of arrow element */
+             width: 30px;
+             height: 46px;
+             cursor: pointer;
+             background: url(/sites/all/themes/stwss/img/a12.png) no-repeat;
+             overflow: hidden;
+         }
+         .jssora12l { background-position: -16px -37px; }
+         .jssora12r { background-position: -75px -37px; }
+         .jssora12l:hover { background-position: -136px -37px; }
+         .jssora12r:hover { background-position: -195px -37px; }
+         .jssora12l.jssora12ldn { background-position: -256px -37px; }
+         .jssora12r.jssora12rdn { background-position: -315px -37px; }
         </style>
         <!-- Arrow Left -->
         <span u="arrowleft" class="jssora12l" style="top: 123px; left: 0px;">
@@ -155,124 +175,132 @@
         </span>
         <!--#endregion Arrow Navigator Skin End -->
 
-        <!--#region Bullet Navigator Skin Begin -->
-        <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
-        <style>
-            /* jssor slider bullet navigator skin 21 css */
-            /*
-            .jssorb21 div           (normal)
-            .jssorb21 div:hover     (normal mouseover)
-            .jssorb21 .av           (active)
-            .jssorb21 .av:hover     (active mouseover)
-            .jssorb21 .dn           (mousedown)
-            */
-            .jssorb21 {
-                position: absolute;
-            }
-            .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
-                position: absolute;
-                /* size of bullet elment */
-                width: 19px;
-                height: 19px;
-                text-align: center;
-                line-height: 19px;
-                color: white;
-                font-size: 12px;
-                background: url(/sites/all/themes/stwss/img/b21.png) no-repeat;
-                overflow: hidden;
-                cursor: pointer;
-            }
-            .jssorb21 div { background-position: -5px -5px; }
-            .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
-            .jssorb21 .av { background-position: -65px -5px; }
-            .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
-        </style>
-        <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb21" style="bottom: 16px; right: 6px;">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype"></div>
-        </div>
-        <!--#endregion Bullet Navigator Skin End -->
+        <!-- <\!--#region Bullet Navigator Skin Begin -\-> -->
+        <!-- <\!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -\-> -->
+        <!-- <style> -->
+        <!--  /* jssor slider bullet navigator skin 21 css */ -->
+        <!--  /* -->
+        <!--     .jssorb21 div           (normal) -->
+        <!--     .jssorb21 div:hover     (normal mouseover) -->
+        <!--     .jssorb21 .av           (active) -->
+        <!--     .jssorb21 .av:hover     (active mouseover) -->
+        <!--     .jssorb21 .dn           (mousedown) -->
+        <!--   */ -->
+        <!--  .jssorb21 { -->
+        <!--      position: absolute; -->
+        <!--  } -->
+        <!--  .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av { -->
+        <!--      position: absolute; -->
+        <!--      /* size of bullet elment */ -->
+        <!--      width: 19px; -->
+        <!--      height: 19px; -->
+        <!--      text-align: center; -->
+        <!--      line-height: 19px; -->
+        <!--      color: white; -->
+        <!--      font-size: 12px; -->
+        <!--      background: url(/sites/all/themes/stwss/img/b21.png) no-repeat; -->
+        <!--      overflow: hidden; -->
+        <!--      cursor: pointer; -->
+        <!--  } -->
+        <!--  .jssorb21 div { background-position: -5px -5px; } -->
+        <!--  .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; } -->
+        <!--  .jssorb21 .av { background-position: -65px -5px; } -->
+        <!--  .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; } -->
+        <!-- </style> -->
+        <!-- <\!-- bullet navigator container -\-> -->
+        <!-- <div u="navigator" class="jssorb21" style="bottom: 16px; right: 6px;"> -->
+        <!--     <\!-- bullet navigator item prototype -\-> -->
+        <!--     <div u="prototype"></div> -->
+        <!-- </div> -->
+        <!-- <\!--#endregion Bullet Navigator Skin End -\-> -->
 
     </div>
 
-  <!-- <div class="banner-image"> -->
-  <!--   <img src="/sites/all/themes/stwss/img/main-banner.jpg" class="img-responsive" /> -->
-  <!-- </div> -->
+    <!-- <div class="banner-image"> -->
+    <!--   <img src="/sites/all/themes/stwss/img/main-banner.jpg" class="img-responsive" /> -->
+    <!-- </div> -->
 </div>
 
 
 <div class="main-container container">
 
-  <header role="banner" id="page-header">
-    <?php if (!empty($site_slogan)): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
+    <header role="banner" id="page-header">
+        <?php if (!empty($site_slogan)): ?>
+            <p class="lead"><?php print $site_slogan; ?></p>
+        <?php endif; ?>
 
-    <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
+        <?php print render($page['header']); ?>
+    </header> <!-- /#page-header -->
 
-  <p class="lead text-center">Welcome to the St Thomas with St
-  Stephen's website! We are a vibrant Anglican church in Clapham
-  Park. We want to live out our faith in community and transform our
-  area.</p>
+    <!-- <p class="lead text-center">Welcome to the St Thomas with St -->
+    <!--     Stephen's website! We are a vibrant Anglican church in Clapham -->
+    <!--     Park. We want to live out our faith in community and transform our -->
+    <!--     area.</p> -->
 
-  <div class="row welcome-cards">
-    <div class="col-md-3"><div class="card action-point"><a href="/about-us"><h2>Welcome</h2></a></div></div>
-    <div class="col-md-3"><div class="card action-point"><a href="/sundays"><h2>Our services</h2></a></div></div>
-    <div class="col-md-3"><div class="card action-point alpha"><a href="/alpha"><h2>Exploring faith</h2></a></div></div>
-    <div class="col-md-3"><div class="card action-point"><a href="/children-and-young-people"><h2>Children & young people</h2></a></div></div>
-  </div>
-
-  <div class="row service-map">
-    <div class="col-md-4">
-      <h4>Sundays 10:30am, St Thomas'</h4>
-      <p>Our main service, very children friendly.</p>
-      <h4>Sundays 7pm, St Stephen's church</h4>
-      <p>Informal evening service, with an emphasis on worship,
-      testimony, teaching and prayer.</p>
-      <p><a href="sundays">Find out more about our services and locations ></a></p>
+    <div class="row welcome-cards">
+        <div class="col-md-3"><div class="card action-point welcome"><a href="/about-us"><h2>Welcome</h2></a></div></div>
+        <div class="col-md-3"><div class="card action-point sundays"><a href="/sundays"><h2>Our services</h2></a></div></div>
+        <div class="col-md-3"><div class="card action-point alpha"><a href="/alpha"><h2>Exploring faith</h2></a></div></div>
+        <div class="col-md-3"><div class="card action-point cyp"><a href="/children-and-young-people"><h2>Children & young people</h2></a></div></div>
     </div>
-    <div class="col-md-8 map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9947.726187284585!2d-0.13538796826171373!3d51.44105100696213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760431f9eb056f%3A0x834ece120d0eb99a!2sSt+Thomas&#39;+Church+(Telford+Park)!5e0!3m2!1sen!2suk!4v1434291141795" width="100%" height="200px" frameborder="0" style="border:0"></iframe>
-    </div>
-  </div>
 
-  <div class="row">
-    <?php print render($page['footer']); ?>
-  </div>
+    <div class="row service-map">
+        <div class="col-md-4">
+            <h4>Sundays 10:30am, St Thomas'</h4>
+            <p>Our main service, very children friendly.</p>
+            <h4>Sundays 7pm, St Stephen's church</h4>
+            <p>Informal evening service, with an emphasis on worship,
+                testimony, teaching and prayer.</p>
+            <p><a href="sundays">Find out more about our services and locations ></a></p>
+        </div>
+        <div class="col-md-8 map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9947.726187284585!2d-0.13538796826171373!3d51.44105100696213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760431f9eb056f%3A0x834ece120d0eb99a!2sSt+Thomas&#39;+Church+(Telford+Park)!5e0!3m2!1sen!2suk!4v1434291141795" width="100%" height="200px" frameborder="0" style="border:0"></iframe>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <?php print render($page['footer_left']) ?>
+        </div>
+        <div class="col-md-4">
+            <?php print render($page['footer_middle']) ?>
+        </div>
+        <div class="col-md-4">
+            <?php print render($page['footer_right']) ?>
+        </div>
+    </div>
 
 </div>
 <footer class="footer">
-  <div class="container">
+    <div class="container">
 
-    <div class="row activites">
-      <div class="col-md-3">
-        <address>
-          <h4>Main address</h4>
-          St Thomas with St Stephen<br>
-          Parish Office<br>
-          Weir Road<br>
-          London SW12 0NU<br>
-          <strong>Phone:</strong> 020 8675 5086
-        </address>
-        <address>
-          <strong>Email</strong><br>
-          <a href="mailto:#">office@stwss.org.uk</a>
-        </address>
-      </div>
+        <div class="row activites">
+            <div class="col-md-3">
+                <address>
+                    <h4>Main address</h4>
+                    St Thomas with St Stephen<br>
+                    Parish Office<br>
+                    Weir Road<br>
+                    London SW12 0NU<br>
+                    <strong>Phone:</strong> 020 8675 5086
+                </address>
+                <address>
+                    <strong>Email</strong><br>
+                    <a href="mailto:#">office@stwss.org.uk</a>
+                </address>
+            </div>
 
-      <div class="col-md-3">
-        <h4>Quicklinks</h4>
-        <ul class="list-unstyled">
-          <li><a href="foo">About</a></li>
-          <li><a href="foo">Giving</a></li>
-          <li><a href="foo">Job opportunities</a></li>
-          <li><a href="foo">Safeguarding</a></li>
-          <li><a href="foo">Baptisms and confirmations</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4"></div>
+            <div class="col-md-3">
+                <h4>Quicklinks</h4>
+                <ul class="list-unstyled">
+                    <li><a href="foo">About</a></li>
+                    <li><a href="foo">Giving</a></li>
+                    <li><a href="foo">Job opportunities</a></li>
+                    <li><a href="foo">Safeguarding</a></li>
+                    <li><a href="foo">Baptisms and confirmations</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
     </div>
-  </div>
 </footer>

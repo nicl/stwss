@@ -74,40 +74,40 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="container">
-    <div class="navbar-header">
-      <?php if ($logo): ?>
-      <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-      </A>
-      <?php endif; ?>
+    <div class="container">
+        <div class="navbar-header">
+            <?php if ($logo): ?>
+                <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                    <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                </A>
+            <?php endif; ?>
 
-      <?php if (!empty($site_name)): ?>
-      <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
+            <?php if (!empty($site_name)): ?>
+                <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+            <?php endif; ?>
 
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+            <div class="navbar-collapse collapse">
+                <nav role="navigation">
+                    <?php if (!empty($primary_nav)): ?>
+                        <?php print render($primary_nav); ?>
+                    <?php endif; ?>
+                    <?php if (!empty($page['navigation'])): ?>
+                        <?php print render($page['navigation']); ?>
+                    <?php endif; ?>
+                </nav>
+            </div>
+        <?php endif; ?>
     </div>
-
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
-        </nav>
-      </div>
-    <?php endif; ?>
-  </div>
 </header>
 
 <!-- <div class="title-banner"> -->
@@ -121,91 +121,98 @@
 <!-- </div> -->
 
 <div class="jumbotron">
-  <div class="container">
-    <h1 class="page-header"><?php print $title; ?></h1>
-  </div>
+    <div class="container">
+        <h1 class="page-header"><?php print $title; ?></h1>
+    </div>
 </div>
 
 <div class="main-container container">
 
-  <header role="banner" id="page-header">
-    <?php if (!empty($site_slogan)): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
+    <header role="banner" id="page-header">
+        <?php if (!empty($site_slogan)): ?>
+            <p class="lead"><?php print $site_slogan; ?></p>
+        <?php endif; ?>
 
-    <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
+        <?php print render($page['header']); ?>
+    </header> <!-- /#page-header -->
 
-  <div class="row">
-    <section<?php print $content_column_class; ?>>
-      <?php if (!empty($page['highlighted'])): ?>
-      <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
-      <!-- <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?> -->
-      <a id="main-content"></a>
+    <div class="row">
+        <section<?php print $content_column_class; ?>>
+            <?php if (!empty($page['highlighted'])): ?>
+                <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+            <?php endif; ?>
+            <!-- <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?> -->
+            <a id="main-content"></a>
 
-      <?php print $messages; ?>
-      <?php if (!empty($page['help'])): ?>
-      <?php print render($page['help']); ?>
-      <?php endif; ?>
+            <?php print $messages; ?>
+            <?php if (!empty($page['help'])): ?>
+                <?php print render($page['help']); ?>
+            <?php endif; ?>
 
-      <?php if (!empty($stwss_child_links)): ?>
-      <ul class="nav nav-pills">
-        <?php foreach($stwss_child_links as $link) { ?>
-        <li role="presentation" <?php if ($link['active']) print 'class="active"'; ?>><a href="<?php print $link['path']; ?>"><?php print $link['title']; ?></a></li>
-        <?php } ?>
-      </ul>
-      <?php endif; ?>
+            <!-- <?php if (!empty($stwss_child_links)): ?> -->
+            <!-- <ul class="nav nav-pills"> -->
+            <!--   <?php foreach($stwss_child_links as $link) { ?> -->
+            <!--   <li role="presentation" <?php if ($link['active']) print 'class="active"'; ?>><a href="<?php print $link['path']; ?>"><?php print $link['title']; ?></a></li> -->
+            <!--   <?php } ?> -->
+            <!-- </ul> -->
+            <!-- <?php endif; ?> -->
 
-      <?php if (!empty($action_links)): ?>
-      <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-    </section>
-  </div>
+            <?php if (!empty($action_links)): ?>
+                <ul class="action-links"><?php print render($action_links); ?></ul>
+            <?php endif; ?>
+            <?php print render($page['content']); ?>
+        </section>
+    </div>
 
-  <!-- <div class="row activites"> -->
-  <!--   <div class="col-md-4"><div class="card"></div></div> -->
-  <!--   <div class="col-md-4"><div class="card"></div></div> -->
-  <!--   <div class="col-md-4"><div class="card"></div></div> -->
-  <!-- </div> -->
+    <!-- <div class="row activites"> -->
+    <!--   <div class="col-md-4"><div class="card"></div></div> -->
+    <!--   <div class="col-md-4"><div class="card"></div></div> -->
+    <!--   <div class="col-md-4"><div class="card"></div></div> -->
+    <!-- </div> -->
 
-  <div class="row">
-    <?php print render($page['footer']); ?>
-  </div>
-
+    <div class="row">
+        <div class="col-md-4">
+            <?php print render($page['footer_left']) ?>
+        </div>
+        <div class="col-md-4">
+            <?php print render($page['footer_middle']) ?>
+        </div>
+        <div class="col-md-4">
+            <?php print render($page['footer_right']) ?>
+        </div>
+    </div>
 
 </div>
 <footer class="footer">
-  <div class="container">
+    <div class="container">
 
-    <div class="row activites">
-      <div class="col-md-3">
-        <address>
-          <h4>Main address</h4>
-          St Thomas with St Stephen<br>
-          Parish Office<br>
-          Weir Road<br>
-          London SW12 0NU<br>
-          <strong>Phone:</strong> 020 8675 5086
-        </address>
-        <address>
-          <strong>Email</strong><br>
-          <a href="mailto:#">office@stwss.org.uk</a>
-        </address>
-      </div>
+        <div class="row activites">
+            <div class="col-md-3">
+                <address>
+                    <h4>Main address</h4>
+                    St Thomas with St Stephen<br>
+                    Parish Office<br>
+                    Weir Road<br>
+                    London SW12 0NU<br>
+                    <strong>Phone:</strong> 020 8675 5086
+                </address>
+                <address>
+                    <strong>Email</strong><br>
+                    <a href="mailto:#">office@stwss.org.uk</a>
+                </address>
+            </div>
 
-      <div class="col-md-3">
-        <h4>Quicklinks</h4>
-        <ul class="list-unstyled">
-          <li><a href="foo">About</a></li>
-          <li><a href="foo">Giving</a></li>
-          <li><a href="foo">Job opportunities</a></li>
-          <li><a href="foo">Safeguarding</a></li>
-          <li><a href="foo">Baptisms and confirmations</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4"></div>
+            <div class="col-md-3">
+                <h4>Quicklinks</h4>
+                <ul class="list-unstyled">
+                    <li><a href="foo">About</a></li>
+                    <li><a href="foo">Giving</a></li>
+                    <li><a href="foo">Job opportunities</a></li>
+                    <li><a href="foo">Safeguarding</a></li>
+                    <li><a href="foo">Baptisms and confirmations</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
     </div>
-  </div>
 </footer>

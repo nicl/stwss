@@ -46,24 +46,23 @@
  */
 ?>
 
-<?php if ($block->region === 'footer'): ?>
-<div class="col-md-4">
-    <div class="card">
-
+<?php if (strpos($block->region, 'footer') !== false): ?>
     <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <?php print render($title_prefix); ?>
+                <?php if ($title): ?>
+                    <h3 class="panel-title"<?php print $title_attributes; ?>><?php print $title; ?></h4>
+                <?php endif;?>
+                <?php print render($title_suffix); ?>
+            </div>
 
-<?php print render($title_prefix); ?>
-<?php if ($title): ?>
-<h4<?php print $title_attributes; ?>><?php print $title; ?></h4>
-<?php endif;?>
-<?php print render($title_suffix); ?>
+            <div class="panel-body">
+                <?php print $content ?>
+            </div>
 
-<?php print $content ?>
-
-</section> <!-- /.block -->
-
-    </div>
-</div>
+        </div>
+    </section> <!-- /.block -->
 
 <?php else: ?>
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
