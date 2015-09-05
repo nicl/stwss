@@ -137,31 +137,34 @@
     </header> <!-- /#page-header -->
 
     <div class="row">
-        <section<?php print $content_column_class; ?>>
-            <?php if (!empty($page['highlighted'])): ?>
-                <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-            <?php endif; ?>
-            <!-- <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?> -->
-            <a id="main-content"></a>
+        <div class="col-md-8">
+            <section<?php print $content_column_class; ?>>
+                <?php if (!empty($page['highlighted'])): ?>
+                    <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+                <?php endif; ?>
+                <!-- <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?> -->
+                <a id="main-content"></a>
 
-            <?php print $messages; ?>
-            <?php if (!empty($page['help'])): ?>
-                <?php print render($page['help']); ?>
-            <?php endif; ?>
+                <?php print $messages; ?>
+                <?php if (!empty($page['help'])): ?>
+                    <?php print render($page['help']); ?>
+                <?php endif; ?>
 
-            <!-- <?php if (!empty($stwss_child_links)): ?> -->
-            <!-- <ul class="nav nav-pills"> -->
-            <!--   <?php foreach($stwss_child_links as $link) { ?> -->
-            <!--   <li role="presentation" <?php if ($link['active']) print 'class="active"'; ?>><a href="<?php print $link['path']; ?>"><?php print $link['title']; ?></a></li> -->
-            <!--   <?php } ?> -->
-            <!-- </ul> -->
-            <!-- <?php endif; ?> -->
+                <!-- <?php if (!empty($stwss_child_links)): ?> -->
+                <!-- <ul class="nav nav-pills"> -->
+                <!--   <?php foreach($stwss_child_links as $link) { ?> -->
+                <!--   <li role="presentation" <?php if ($link['active']) print 'class="active"'; ?>><a href="<?php print $link['path']; ?>"><?php print $link['title']; ?></a></li> -->
+                <!--   <?php } ?> -->
+                <!-- </ul> -->
+                <!-- <?php endif; ?> -->
 
-            <?php if (!empty($action_links)): ?>
-                <ul class="action-links"><?php print render($action_links); ?></ul>
-            <?php endif; ?>
-            <?php print render($page['content']); ?>
-        </section>
+                <?php if (!empty($action_links)): ?>
+                    <ul class="action-links"><?php print render($action_links); ?></ul>
+                <?php endif; ?>
+                <?php print render($page['content']); ?>
+            </section>
+        </div>
+
     </div>
 
     <!-- <div class="row activites"> -->
