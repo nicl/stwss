@@ -1,5 +1,5 @@
 .logo img {
-    height: 32px;
+    height: 34px;
 }
 
 .navbar {
@@ -28,8 +28,14 @@
 }
 
 .banner h1 {
-    font-size: 40px;
+    font-size: 28px;
     margin-top: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 18px;
 }
 
 body.navbar-is-fixed-top,
@@ -83,7 +89,7 @@ body.logged-in.toolbar.navbar-is-fixed-top {
 }
 
 .welcome-cards .col-md-3 {
-    padding: 0;
+    padding: 0 15px;
 }
 
 .card.action-point a {
@@ -125,6 +131,7 @@ body.logged-in.toolbar.navbar-is-fixed-top {
     text-transform: uppercase;
     font-size: 21px;
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-weight: bold;
     /* display: block; */
     /* padding: 20px; */
     /* margin: 0; */

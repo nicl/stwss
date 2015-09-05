@@ -232,6 +232,11 @@
         <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
 
+    <div class="alert alert-info alert-dismissable" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Welcome to our new site. Please bear with us as we improve the
+        site! We'd love to hear your thoughts on what we're doing well, and what could be improved. To leave feedback click <a href="https://docs.google.com/forms/d/1bpAQhbI2IxrmxgPQwt-S9A3LoYdFLQEh_PvWxndIFfM/viewform?usp=send_form">here</a></div>
+
     <!-- <p class="lead text-center">Welcome to the St Thomas with St -->
     <!--     Stephen's website! We are a vibrant Anglican church in Clapham -->
     <!--     Park. We want to live out our faith in community and transform our -->
