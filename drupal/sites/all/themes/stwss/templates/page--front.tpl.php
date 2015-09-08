@@ -115,11 +115,14 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1024px; height: 342px;">
             <div>
+                <a u="image" href="/events/2015-09-27/opening-celebration-service"><img src="/sites/all/themes/stwss/img/main-banner-celebration-service.jpg" /></a>
+            </div>
+            <div>
                 <a u="image" href="/welcome"><img src="/sites/all/themes/stwss/img/main-banner-love-lambeth.jpg" /></a>
                 <a u="caption" href="/welcome" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
                     <div class="banner-inner">
-                        <h1>Welcome</h1>
-                        <p>We are a vibrant Anglican church in Clapham Park. We want to live out our faith in community and transform our area.</p>
+                        <h1>Transforming our area</h1>
+                        <p>We want to live out our faith in community and transform our area.</p>
                     </div>
                 </a>
             </div>
