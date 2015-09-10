@@ -118,8 +118,8 @@
                 <a u="image" href="/events/2015-09-27/opening-celebration-service"><img src="/sites/all/themes/stwss/img/main-banner-celebration-service.jpg" /></a>
             </div>
             <div>
-                <a u="image" href="/welcome"><img src="/sites/all/themes/stwss/img/main-banner-love-lambeth.jpg" /></a>
-                <a u="caption" href="/welcome" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
+                <a u="image" href="/local-mission"><img src="/sites/all/themes/stwss/img/main-banner-love-lambeth.jpg" /></a>
+                <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
                     <div class="banner-inner">
                         <h1>Transforming our area</h1>
                         <p>We want to live out our faith in community and transform our area.</p>
@@ -254,7 +254,7 @@
 
     <div class="row service-map">
         <div class="col-md-4">
-            <h4>Sundays 10:30am, St Thomas'</h4>
+            <h4>Sundays 10:15am, St Thomas'</h4>
             <p>Our main service, very children friendly.</p>
             <h4>Sundays 7pm, St Stephen's church</h4>
             <p>Informal evening service, with an emphasis on worship,
@@ -301,11 +301,11 @@
             <div class="col-md-3">
                 <h4>Quicklinks</h4>
                 <ul class="list-unstyled">
-                    <li><a href="foo">About</a></li>
-                    <li><a href="foo">Giving</a></li>
-                    <li><a href="foo">Job opportunities</a></li>
-                    <li><a href="foo">Safeguarding</a></li>
-                    <li><a href="foo">Baptisms and confirmations</a></li>
+                    <li><a href="/about-us">About</a></li>
+                    <li><a href="/giving">Giving</a></li>
+                    <li><a href="/jobs">Job opportunities</a></li>
+                    <li><a href="/safeguarding">Safeguarding</a></li>
+                    <li><a href="/baptism">Baptisms and confirmations</a></li>
                 </ul>
             </div>
             <div class="col-md-4"></div>

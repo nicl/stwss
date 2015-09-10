@@ -208,11 +208,11 @@
             <div class="col-md-3">
                 <h4>Quicklinks</h4>
                 <ul class="list-unstyled">
-                    <li><a href="foo">About</a></li>
-                    <li><a href="foo">Giving</a></li>
-                    <li><a href="foo">Job opportunities</a></li>
-                    <li><a href="foo">Safeguarding</a></li>
-                    <li><a href="foo">Baptisms and confirmations</a></li>
+                    <li><a href="/about-us">About</a></li>
+                    <li><a href="/giving">Giving</a></li>
+                    <li><a href="/jobs">Job opportunities</a></li>
+                    <li><a href="/safeguarding">Safeguarding</a></li>
+                    <li><a href="/baptism">Baptisms and confirmations</a></li>
                 </ul>
             </div>
             <div class="col-md-4"></div>
