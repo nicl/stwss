@@ -210,7 +210,7 @@
                 <ul class="list-unstyled">
                     <li><a href="/about-us">About</a></li>
                     <li><a href="/giving">Giving</a></li>
-                    <li><a href="/jobs">Job opportunities</a></li>
+                    <li><a href="/work-for-us">Job opportunities</a></li>
                     <li><a href="/safeguarding">Safeguarding</a></li>
                     <li><a href="/baptism">Baptisms and confirmations</a></li>
                 </ul>

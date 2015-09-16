@@ -118,7 +118,7 @@
                 <a u="image" href="/events/2015-09-27/opening-celebration-service"><img src="/sites/all/themes/stwss/img/main-banner-celebration-service.jpg" /></a>
             </div>
             <div>
-                <a u="image" href="/local-mission"><img src="/sites/all/themes/stwss/img/main-banner-love-lambeth.jpg" /></a>
+                <a u="image" href="/local-mission"><img src="/sites/all/themes/stwss/img/main-banner-balham.jpg" /></a>
                 <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
                     <div class="banner-inner">
                         <h1>Transforming our area</h1>
@@ -131,7 +131,7 @@
                 <a u="caption" href="/alpha" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
                     <div class="banner-inner">
                         <h1>Got questions about life</h1>
-                        <p>Alpha is for everyone who's curious. Alpha starts Tuesday 22nd September 7:15 (with supper).</p>
+                        <p>Alpha is for everyone who's curious. Alpha starts Tuesday 6th October 7:45 (with supper).</p>
                     </div>
                 </a>
             </div>
@@ -249,19 +249,21 @@
         <div class="col-md-3"><div class="card action-point welcome"><a href="/about-us"><h2>Welcome</h2></a></div></div>
         <div class="col-md-3"><div class="card action-point sundays"><a href="/sundays"><h2>Our services</h2></a></div></div>
         <div class="col-md-3"><div class="card action-point alpha"><a href="/alpha"><h2>Exploring faith</h2></a></div></div>
-        <div class="col-md-3"><div class="card action-point cyp"><a href="/children-and-young-people"><h2>Children & young people</h2></a></div></div>
+        <div class="col-md-3"><div class="card action-point cyp"><a href="/children"><h2>Children & young people</h2></a></div></div>
     </div>
+
+0333 336 5691
 
     <div class="row service-map">
         <div class="col-md-4">
             <h4>Sundays 10:15am, St Thomas'</h4>
-            <p>Our main service, very children friendly.</p>
+            <p>Our main morning service, with Sunday School and communion most weeks. Our current sermon series is looking at Jesus’ Sermon on the Mount.</p>
             <h4>Sundays 7pm, St Stephen's church</h4>
-            <p>Informal evening service, with an emphasis on worship,
-                testimony, teaching and prayer.</p>
+            <p>Monthly informal evening service, with an emphasis on worship, testimony, teaching and prayer.</p>
             <p><a href="sundays">Find out more about our services and locations ></a></p>
         </div>
         <div class="col-md-8 map">
+            <!-- <img src="/sites/all/themes/stwss/img/st-thomas-map.jpg" alt="Map of St Thomas location" /> -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9947.726187284585!2d-0.13538796826171373!3d51.44105100696213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760431f9eb056f%3A0x834ece120d0eb99a!2sSt+Thomas&#39;+Church+(Telford+Park)!5e0!3m2!1sen!2suk!4v1434291141795" width="100%" height="200px" frameborder="0" style="border:0"></iframe>
         </div>
     </div>
@@ -303,7 +305,7 @@
                 <ul class="list-unstyled">
                     <li><a href="/about-us">About</a></li>
                     <li><a href="/giving">Giving</a></li>
-                    <li><a href="/jobs">Job opportunities</a></li>
+                    <li><a href="/work-for-us">Job opportunities</a></li>
                     <li><a href="/safeguarding">Safeguarding</a></li>
                     <li><a href="/baptism">Baptisms and confirmations</a></li>
                 </ul>
