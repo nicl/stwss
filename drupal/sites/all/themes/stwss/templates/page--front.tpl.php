@@ -252,8 +252,6 @@
         <div class="col-md-3"><div class="card action-point cyp"><a href="/children"><h2>Children & young people</h2></a></div></div>
     </div>
 
-0333 336 5691
-
     <div class="row service-map">
         <div class="col-md-4">
             <h4>Sundays 10:15am, St Thomas'</h4>

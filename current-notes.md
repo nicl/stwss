@@ -60,4 +60,4 @@ Homepage:
 
 ## Commands
 
-rsync -vr --exclude=settings.php -e 'ssh -i /Users/nlong/.ssh/stwss-key-pair.pem' /Users/nlong/projects/stwss/drupal/ ec2-user@stwss:/var/www/html/
+rsync -vr --exclude=settings.php -e 'ssh -i /Users/nlong/.ssh/stwss-key-pair.pem' /Users/nlong/projects/stwss/drupal/sites/all/themes/stwss/ ec2-user@stwss:/var/www/html/sites/all/themes/stwss/
