@@ -115,7 +115,7 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1024px; height: 342px;">
             <div>
-                <a u="image" href="/events/2015-09-27/opening-celebration-service"><img src="/sites/all/themes/stwss/img/main-banner-celebration-service.jpg" /></a>
+                <a u="image" href="/about-us"><img src="/sites/all/themes/stwss/img/main-banner-welcome.jpg" /></a>
             </div>
             <div>
                 <a u="image" href="/local-mission"><img src="/sites/all/themes/stwss/img/main-banner-balham.jpg" /></a>
