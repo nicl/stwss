@@ -118,6 +118,9 @@
                 <a u="image" href="/about-us"><img src="/sites/all/themes/stwss/img/main-banner-welcome.jpg" /></a>
             </div>
             <div>
+                <a u="image" href="/cap-money-course"><img src="/sites/all/themes/stwss/img/main-banner-cap.png" /></a>
+            </div>
+            <div>
                 <a u="image" href="/local-mission"><img src="/sites/all/themes/stwss/img/main-banner-balham.jpg" /></a>
                 <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
                     <div class="banner-inner">
@@ -125,9 +128,6 @@
                         <p>We want to live out our faith in community and transform our area.</p>
                     </div>
                 </a>
-            </div>
-            <div>
-                <a u="image" href="/cap-money-course"><img src="/sites/all/themes/stwss/img/main-banner-cap.png" /></a>
             </div>
             <div>
                 <a u="image" href="/alpha"><img src="/sites/all/themes/stwss/img/main-banner-alpha.jpg" /></a>
