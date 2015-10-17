@@ -127,6 +127,9 @@
                 </a>
             </div>
             <div>
+                <a u="image" href="/cap-money-course"><img src="/sites/all/themes/stwss/img/main-banner-cap.png" /></a>
+            </div>
+            <div>
                 <a u="image" href="/alpha"><img src="/sites/all/themes/stwss/img/main-banner-alpha.jpg" /></a>
                 <a u="caption" href="/alpha" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
                     <div class="banner-inner">
@@ -258,7 +261,7 @@
             <p>Our main morning service, with Sunday School and communion most weeks. Our current sermon series is looking at Jesus’ Sermon on the Mount.</p>
             <h4>Sundays 7pm, St Stephen's church</h4>
             <p>Monthly informal evening service, with an emphasis on worship, testimony, teaching and prayer.</p>
-            <p><a href="sundays">Find out more about our services and locations ></a></p>
+            <p><a href="/services">Find out more about our services and locations ></a></p>
         </div>
         <div class="col-md-8 map">
             <!-- <img src="/sites/all/themes/stwss/img/st-thomas-map.jpg" alt="Map of St Thomas location" /> -->
@@ -293,8 +296,7 @@
                     <strong>Phone:</strong> 020 8675 5086
                 </address>
                 <address>
-                    <strong>Email</strong><br>
-                    <a href="mailto:#">office@stwss.org.uk</a>
+                    <strong>Email: </strong><a href="mailto:#">office@stwss.org.uk</a>
                 </address>
             </div>
 
