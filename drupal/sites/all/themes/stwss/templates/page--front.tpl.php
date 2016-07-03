@@ -117,9 +117,11 @@
             <div>
                 <a u="image" href="/about-us"><img src="/sites/all/themes/stwss/img/main-banner-welcome.jpg" /></a>
             </div>
+
             <div>
-                <a u="image" href="/cap-money-course"><img src="/sites/all/themes/stwss/img/main-banner-cap.png" /></a>
+                <a u="image" href="/holiday-club"><img src="/sites/all/themes/stwss/img/main-banner-holiday-club.jpg" /></a>
             </div>
+
             <div>
                 <a u="image" href="/local-mission"><img src="/sites/all/themes/stwss/img/main-banner-balham.jpg" /></a>
                 <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
@@ -129,19 +131,17 @@
                     </div>
                 </a>
             </div>
+
             <div>
-                <a u="image" href="/alpha"><img src="/sites/all/themes/stwss/img/main-banner-alpha.jpg" /></a>
-                <a u="caption" href="/alpha" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
+                <a u="image" href="https://stwss-files.s3.amazonaws.com/stwss-bookings-2016.pdf"><img src="/sites/all/themes/stwss/img/main-banner-bookings.jpg" /></a>
+                <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
                     <div class="banner-inner">
-                        <h1>Got questions about life</h1>
-                        <p>Alpha is for everyone who's curious. Alpha starts Tuesday 6th October 7:45 (with supper).</p>
+                        <h1>Room bookings</h1>
+                        <p>bookings@stwss.org.uk</p>
                     </div>
                 </a>
             </div>
 
-            <!-- <div> -->
-            <!--     <img u="image" src="/sites/all/themes/stwss/img/main-banner-alpha.jpg" /> -->
-            <!-- </div> -->
         </div>
 
         <!--#region Arrow Navigator Skin Begin -->
@@ -308,6 +308,7 @@
                     <li><a href="/work-for-us">Job opportunities</a></li>
                     <li><a href="/safeguarding">Safeguarding</a></li>
                     <li><a href="/baptism">Baptisms and confirmations</a></li>
+                    <li><a href="https://stwss-files.s3.amazonaws.com/stwss-bookings-2016.pdf">Bookings</a></li>
                 </ul>
             </div>
             <div class="col-md-4"></div>

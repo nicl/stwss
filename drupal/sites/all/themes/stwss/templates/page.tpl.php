@@ -200,8 +200,7 @@
                     <strong>Phone:</strong> 020 8675 5086
                 </address>
                 <address>
-                    <strong>Email</strong><br>
-                    <a href="mailto:#">office@stwss.org.uk</a>
+                    <strong>Email: </strong><a href="mailto:#">office@stwss.org.uk</a>
                 </address>
             </div>
 
@@ -213,6 +212,7 @@
                     <li><a href="/work-for-us">Job opportunities</a></li>
                     <li><a href="/safeguarding">Safeguarding</a></li>
                     <li><a href="/baptism">Baptisms and confirmations</a></li>
+                    <li><a href="https://stwss-files.s3.amazonaws.com/stwss-bookings-2016.pdf">Bookings</a></li>
                 </ul>
             </div>
             <div class="col-md-4"></div>

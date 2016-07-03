@@ -41,3 +41,6 @@ drupal/sites/all/modules
 
 # Ignore local backups (contain db data)
 drupal/backups
+
+.DS_STORE
+current-notes.md

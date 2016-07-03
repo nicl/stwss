@@ -169,6 +169,10 @@ body.logged-in.toolbar.navbar-is-fixed-top {
     margin-top: 0;
 }
 
+.front .jumbotron {
+    background-image: none;
+}
+
 .jumbotron {
     background-image: url("/sites/all/themes/stwss/img/header-background.jpg");
     background-repeat: no-repeat;
