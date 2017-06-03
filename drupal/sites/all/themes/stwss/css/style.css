@@ -181,6 +181,20 @@ body.logged-in.toolbar.navbar-is-fixed-top {
     color: white;
 }
 
+.banner {
+    margin-bottom: 30px;
+}
+
+.flexslider {
+    line-height: 1;
+    margin: 0;
+    border: none;
+}
+
+.flex-control-nav {
+    display: none;
+}
+
 .jumbotron.banner {
     padding: 0;
 }

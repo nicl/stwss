@@ -110,37 +110,41 @@
     </div>
 </header>
 
-<div class="jumbotron banner">
-    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1024px; height: 342px; overflow: hidden;">
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1024px; height: 342px;">
-            <div>
-                <a u="image" href="/about-us"><img src="/sites/all/themes/stwss/img/main-banner-welcome.jpg" /></a>
-            </div>
+<div class="banner">
+    <?php print render($page['banner']) ?>
+</div>
 
-            <div>
-                <a u="image" href="/holiday-club"><img src="/sites/all/themes/stwss/img/main-banner-holiday-club.jpg" /></a>
-            </div>
+<!-- <div class="jumbotron banner">
+     <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1024px; height: 342px; overflow: hidden;">
+     <!-- Slides Container -->
+<!-- <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1024px; height: 342px;">
+     <div>
+     <a u="image" href="/about-us"><img src="/sites/all/themes/stwss/img/main-banner-welcome.jpg" /></a>
+     </div>
 
-            <div>
-                <a u="image" href="/local-mission"><img src="/sites/all/themes/stwss/img/main-banner-balham.jpg" /></a>
-                <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
-                    <div class="banner-inner">
-                        <h1>Transforming our area</h1>
-                        <p>We want to live out our faith in community and transform our area.</p>
-                    </div>
-                </a>
-            </div>
+     <div>
+     <a u="image" href="/alpha"><img src="/sites/all/themes/stwss/img/main-banner-alpha-2016.jpg" /></a>
+     </div>
 
-            <div>
-                <a u="image" href="https://stwss-files.s3.amazonaws.com/stwss-bookings-2016.pdf"><img src="/sites/all/themes/stwss/img/main-banner-bookings.jpg" /></a>
-                <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
-                    <div class="banner-inner">
-                        <h1>Room bookings</h1>
-                        <p>bookings@stwss.org.uk</p>
-                    </div>
-                </a>
-            </div>
+     <div>
+     <a u="image" href="/local-mission"><img src="/sites/all/themes/stwss/img/main-banner-balham.jpg" /></a>
+     <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
+     <div class="banner-inner">
+     <h1>Transforming our area</h1>
+     <p>We want to live out our faith in community and transform our area.</p>
+     </div>
+     </a>
+     </div>
+
+     <div>
+     <a u="image" href="https://stwss-files.s3.amazonaws.com/stwss-bookings-2016.pdf"><img src="/sites/all/themes/stwss/img/main-banner-bookings.jpg" /></a>
+     <a u="caption" href="/local-mission" t="transition_name1" style="position: absolute; bottom: 20px; left: 0px; width: 100%;" class="banner-text">
+     <div class="banner-inner">
+     <h1>Room bookings</h1>
+     <p>bookings@stwss.org.uk</p>
+     </div>
+     </a> -->
+<!-- </div> -->
 
         </div>
 
@@ -238,10 +242,10 @@
         <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
 
-    <div class="alert alert-info alert-dismissable" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        Welcome to our new site. Please bear with us as we improve the
-        site! We'd love to hear your thoughts on what we're doing well, and what could be improved. To leave feedback click <a href="https://docs.google.com/forms/d/1bpAQhbI2IxrmxgPQwt-S9A3LoYdFLQEh_PvWxndIFfM/viewform?usp=send_form">here</a></div>
+    <!-- <div class="alert alert-info alert-dismissable" role="alert">
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         Welcome to our new site. Please bear with us as we improve the
+         site! We'd love to hear your thoughts on what we're doing well, and what could be improved. To leave feedback click <a href="https://docs.google.com/forms/d/1bpAQhbI2IxrmxgPQwt-S9A3LoYdFLQEh_PvWxndIFfM/viewform?usp=send_form">here</a></div> -->
 
     <!-- <p class="lead text-center">Welcome to the St Thomas with St -->
     <!--     Stephen's website! We are a vibrant Anglican church in Clapham -->
@@ -250,7 +254,7 @@
 
     <div class="row welcome-cards">
         <div class="col-md-3"><div class="card action-point welcome"><a href="/about-us"><h2>Welcome</h2></a></div></div>
-        <div class="col-md-3"><div class="card action-point sundays"><a href="/sundays"><h2>Our services</h2></a></div></div>
+        <div class="col-md-3"><div class="card action-point sundays"><a href="/services"><h2>Our services</h2></a></div></div>
         <div class="col-md-3"><div class="card action-point alpha"><a href="/alpha"><h2>Exploring faith</h2></a></div></div>
         <div class="col-md-3"><div class="card action-point cyp"><a href="/children"><h2>Children & young people</h2></a></div></div>
     </div>
@@ -267,6 +271,11 @@
             <!-- <img src="/sites/all/themes/stwss/img/st-thomas-map.jpg" alt="Map of St Thomas location" /> -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9947.726187284585!2d-0.13538796826171373!3d51.44105100696213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760431f9eb056f%3A0x834ece120d0eb99a!2sSt+Thomas&#39;+Church+(Telford+Park)!5e0!3m2!1sen!2suk!4v1434291141795" width="100%" height="200px" frameborder="0" style="border:0"></iframe>
         </div>
+    </div>
+
+    <div class="row">
+        <?php if(drupal_is_front_page()) {unset($page['content']['system_main']['default_message']);} ?>
+        <?php print render($page['content']) ?>
     </div>
 
     <div class="row">
