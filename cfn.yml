@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Instance(s) provisioned with LAMP stack, within ASG'
+Parameters:
+  InstanceType:
+    AllowedValues:
+    - t2.nano
+    - t2.micro
+    - t2.small
+    ConstraintDescription: must be a valid EC2 instance type.
+    Default: t2.nano
+    Description: WebServer EC2 instance type
+    Type: String
+  ImageId:
+    Description: Valid AMI ID (must be ubuntu linux)
+    Type: String
+  KeyName:
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instances
+    Type: AWS::EC2::KeyPair::KeyName
+  Subnets:
+    ConstraintDescription: must be a list of at least two existing subnets associated
+      with at least two different availability zones. They should be residing in the
+      selected Virtual Private Cloud.
+    Description: The list of SubnetIds in your Virtual Private Cloud (VPC)
+    Type: List<AWS::EC2::Subnet::Id>
+  VpcId:
+    ConstraintDescription: must be the VPC Id of an existing Virtual Private Cloud.
+    Description: VpcId of your existing Virtual Private Cloud (VPC)
+    Type: AWS::EC2::VPC::Id
+  WebServerCapacity:
+    ConstraintDescription: must be between 1 and 5 EC2 instances.
+    Default: '1'
+    Description: The initial nuber of WebServer instances
+    MaxValue: '3'
+    MinValue: '1'
+    Type: Number
+Resources:
+  LaunchConfig:
+    Properties:
+      ImageId:
+        Ref: ImageId
+      InstanceType:
+        Ref: InstanceType
+      KeyName:
+        Ref: KeyName
+      SecurityGroups:
+      - Ref: WebServerSecurityGroup
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -ev
+          echo starting up...
+          apt-get update -y
+          apt-get install -y apache2 mysql-server
+    Type: AWS::AutoScaling::LaunchConfiguration
+  WebServerGroup:
+    Properties:
+      DesiredCapacity:
+        Ref: WebServerCapacity
+      LaunchConfigurationName:
+        Ref: LaunchConfig
+      MaxSize: '5'
+      MinSize: '1'
+      VPCZoneIdentifier:
+        Ref: Subnets
+      Tags:
+      - Key: Name
+        Value: stwss
+        PropagateAtLaunch: 'true'
+    Type: AWS::AutoScaling::AutoScalingGroup
+  WebServerSecurityGroup:
+    Properties:
+      GroupDescription: Enable access on port 80 (website) and 22 (ssh)
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0
+      VpcId:
+        Ref: VpcId
+    Type: AWS::EC2::SecurityGroup
