@@ -3,7 +3,34 @@ St Thomas with St Stephen's Website
 
 [http://www.stwss.org.uk](http://www.stwss.org.uk)
 
-## Brief
+## Running
+
+The site is currently running on AWS using Codedeploy for in-place
+code updates, connected to Github.
+
+Most of the provisioning is automated, but you'll need to set up the
+lamp stack and database on the initial deploy. SSH into the instance
+and run:
+
+    $ sudo apt-get install tasksel
+    $ sudo tasksel install lamp-server
+
+At this point you'll be prompted for a master password for mysql.
+
+You should then be able to restore a recent database backup using the
+Backup and Restore module. (You may need to ensure the server has API
+keys for S3 access before doing this, as backups are stored in S3.)
+
+## Status
+
+*2017-06-01* - the initial version of the site has been running for
+almost 2 years and hasn't really been updated in the time beyond a few
+minor changes. The focus at the moment is now to make it easy and
+reliable to deploy changes and facilate quicker iteration. As part of
+this, we will migrate to Drupal 8, which has better configuration
+management.
+
+## Original brief
 
 The current site does not do a good job of introducing the church: in
 appearance it is middle-aged; functionally, it is not straightforward
@@ -56,7 +83,7 @@ Ideas for images include:
 * local shops
 * any iconic locations in the area
 
-## Budget
+## Original budget
 
 The budget is low/non-existent. The aim is to produce the site quickly
 and cheaply (perhaps using a stock design of some sort). Nic Long has
@@ -64,10 +91,3 @@ agreed to lead on this on a voluntary basis.
 
 The site is expected to last for a couple of years or so, at which
 point we may have grown sufficiently to invest in a new website(!).
-
-## Timelines
-
-Ready for before June 12th.
-
-(This is the target date for when the new morning service should start
-at St Thomas'.)

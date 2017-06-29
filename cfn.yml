@@ -50,7 +50,10 @@ Resources:
           #!/bin/bash -ev
           echo starting up...
           apt-get update -y
-          apt-get install -y apache2 mysql-server
+          apt-get install git-all
+          # Run these commands manually as interactive
+          # apt-get install tasksel
+          # tasksel install lamp-server
     Type: AWS::AutoScaling::LaunchConfiguration
   WebServerGroup:
     Properties:
